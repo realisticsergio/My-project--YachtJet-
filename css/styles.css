@@ -1,0 +1,350 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #434455;
+    background-color: #0e1823;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    margin: -1px;
+}
+
+/* common */
+
+.container {
+    max-width: 375px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+
+}
+.page-header {
+    max-width: 343px;
+        margin: 20px auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 42px;
+    padding: 0 16px;
+    background-color: #ffffff;
+        border-radius: 6px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.logo {
+    padding-left: 20px;
+}
+.nav-list {
+    display: none;
+}
+.burger-btn {
+    padding-right: 20px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.burger-icon {
+    display: block;
+    fill: #372f2f;
+}
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            -webkit-image-set(url('../images/mobile/image-mobile@1x.jpg') 1x,
+                url('../images/mobile/image-mobile@2x.jpg') 2x);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            image-set(url('../images/mobile/image-mobile@1x.jpg') 1x,
+                url('../images/mobile/image-mobile@2x.jpg') 2x);
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    margin: 0;
+    padding: 198px 0;
+}
+.hero-title {
+    font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #fbfbfb;
+        margin: 0 auto 24px;
+}
+.hero-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+        font-size: 12px;
+        line-height: 117%;
+        text-align: center;
+        color: rgba(251, 251, 251, 0.7);
+        margin: 0 auto 38px;
+}
+.hero-btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    border-radius: 15px;
+    width: 141px;
+    height: 46px;
+    background: #1b414b;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about {
+    padding-bottom: 60px;
+        background-color: #0E1823;
+        /* Темний фон всієї секції */
+}
+.about-content {
+    min-height: 600px;
+    display: flex;
+        flex-direction: column;
+    background-color: #fbfbfb;
+    border-radius: 24px;
+    padding: 40px 20px;
+    padding-bottom: 300px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 1;
+}
+.about-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.07;
+    letter-spacing: -0.02em;
+    color: #1b414b;
+    margin-bottom: 40px;
+}
+
+.about-subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.29;
+    color: #040306;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: -0.02em;
+    color: #040306;
+    opacity: 0.4;
+    
+}
+.about-photo {
+    margin-top: 24px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: -250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+.yachts {
+    padding: 80px 0;
+    background-color: #0e1823;
+    /* Темний фон як у Hero */
+}
+.yachts-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.07;
+    text-align: center;
+    color: #fbfbfb;
+    margin-bottom: 40px;
+    max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.yacht-card {
+    background-color: #fbfbfb;
+    border-radius: 24px;
+    padding: 16px;
+    max-width: 335px;
+    margin: 0 auto;
+}
+.yacht-img {
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+.yacht-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(27, 65, 75, 0.1);
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+}
+.yacht-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b414b;
+}
+
+.yacht-category {
+    font-size: 10px;
+    color: rgba(27, 65, 75, 0.5);
+    text-transform: uppercase;
+}
+.yacht-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b414b;
+}
+
+.yacht-category {
+    font-size: 10px;
+    color: rgba(27, 65, 75, 0.5);
+    text-transform: uppercase;
+}
+.yacht-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 1.17;
+}
+.detail-item span:first-child {
+    color: rgba(27, 65, 75, 0.5);
+    /* Назви характеристик */
+    text-transform: uppercase;
+}
+.detail-item span:last-child {
+    color: #1b414b;
+    /* Значення характеристик */
+}
+.yacht-rental-btn {
+    display: block;
+    margin: 32px auto 0;
+    padding: 12px 28px;
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    background: transparent;
+    color: #fbfbfb;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+    .page-header {
+        margin-top: 30px;
+        /* Трохи більше відступу зверху */
+        background-color: transparent;
+        /* Робимо фон прозорим */
+        box-shadow: none;
+        /* Прибираємо тінь мобільної версії */
+    }
+    .header {
+        background-color: transparent;
+        box-shadow: none;
+        height: auto;
+        /* Дозволяємо кнопкам меню задавати висоту */
+    }
+
+    /* Показуємо список навігації, який був прихований */
+    .nav-list {
+        display: flex;
+        gap: 10px;
+        /* Відстань між кнопками/посиланнями */
+    }
+
+    /* Приховуємо бургер-меню, бо на десктопі є звичайне меню */
+    .burger-btn {
+        display: none;
+    }
+
+    .logo {
+        padding-left: 0;
+        /* Прибираємо мобільні відступи */
+        color: #fff;
+        /* Робимо лого білим для темного фону */
+        font-weight: 700;
+        font-size: 18px;
+    }
+}

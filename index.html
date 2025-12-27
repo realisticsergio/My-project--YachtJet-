@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container header">
+        <a class="logo" href="./index.html">yachtjet</a>
+        <nav class="nav-list">
+          <button type="button">About</button>
+          <button type="button">Yachts</button>
+          <button type="button">Reviews</button>
+        </nav>
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-icon-menu-equals"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-title">
+            Explore the High Seas with Our Luxury Yacht Rentals
+          </h1>
+          <p class="hero-text">
+            Experience the freedom and luxury of yachting on the open seas.
+            Choose from our top-of-the-line yachts and embark on an
+            unforgettable journey surrounded by breathtaking views and
+            state-of-the-art amenities.
+          </p>
+          <button class="hero-btn" type="button">Yacht rental</button>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about-content">
+            <h2 class="about-title">
+              YachtJet fleet is here to take you on the ultimate adventure
+            </h2>
+            <h3 class="about-subtitle">
+              From spacious decks to state-of-the-art technology, our yachts are
+              designed to provide the perfect blend of luxury and functionality.
+            </h3>
+            <p class="about-text">
+              Take a look at our selection below and choose the yacht that
+              matches your needs and preferences.No matter which yacht you
+              choose, our experienced crew will ensure that your journey is
+              smooth and enjoyable. Book now and get ready for an unforgettable
+              adventure on the high seas.
+            </p>
+          </div>
+          <div class="about-photo">
+            <picture>
+              <source
+                srcset="
+                  ./images/tablet/image-tablet@1x.jpg 1x,
+                  ./images/tablet/image-tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/mobile/yacht-night@1x.png.jpg 1x,
+                  ./images/mobile/yacht-night@2x.png.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                src="./images/mobile/yacht-night@1x.png.jpg"
+                alt="Luxury yacht YachtJet"
+                width="335"
+                height="675"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="yachts">
+        <div class="container">
+          <h2 class="yachts-title">
+            Choose your dream yacht and sail away into the sunset
+          </h2>
+          <ul class="yachts-list">
+            <li class="yachts-item">
+              <div class="yacht-card">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/yacht-1@1x.jpg 1x,
+                      ./images/mobile/yacht-1@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/mobile/yacht-1@1x.jpg"
+                    alt="Yacht Arrow"
+                    class="yacht-img"
+                  />
+                </picture>
+
+                <div class="yacht-info">
+                  <div class="yacht-header">
+                    <h3 class="yacht-name">ARROW</h3>
+                    <p class="yacht-category">LUXURY YACHTS</p>
+                  </div>
+
+                  <ul class="yacht-details">
+                    <li class="detail-item">
+                      <span>Length</span> <span>48m(158ft)</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Builder</span> <span>Admiral</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Built</span> <span>2021</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Guests</span> <span>11 in 5 cabins</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Price</span> <span>€33,500,000</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <button class="yacht-rental-btn" type="button">Yacht rental</button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
