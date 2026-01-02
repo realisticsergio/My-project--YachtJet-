@@ -81,6 +81,7 @@ button {
     }
 
 }
+/* HEADER */
 .page-header {
     max-width: 343px;
         margin: 20px auto;
@@ -114,6 +115,7 @@ button {
     display: block;
     fill: #372f2f;
 }
+/* HERO */
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
             -webkit-image-set(url('../images/mobile/image-mobile@1x.jpg') 1x,
@@ -162,6 +164,7 @@ button {
     margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* ABOUT*/
 .about {
     padding-bottom: 60px;
         background-color: #0E1823;
@@ -222,6 +225,7 @@ button {
     object-fit: cover;
 
 }
+/* YACHTS */
 .yachts {
     padding: 80px 0;
     background-color: #0e1823;
@@ -246,16 +250,16 @@ button {
     margin: 0 auto;
 }
 .yacht-img {
-    border-radius: 16px;
-    margin-bottom: 16px;
+    border-radius: 24px;
+    margin-bottom: 32px;
 }
 .yacht-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(27, 65, 75, 0.1);
-    padding-bottom: 14px;
-    margin-bottom: 14px;
+    padding: 16px
+
 }
 .yacht-name {
     font-size: 14px;
@@ -275,41 +279,334 @@ button {
 }
 
 .yacht-category {
-    font-size: 10px;
-    color: rgba(27, 65, 75, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.03em;
+    color: #040306;
     text-transform: uppercase;
+    opacity: 0.4;
 }
 .yacht-details {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    padding: 16px;
 }
 .detail-item {
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    line-height: 1.18;
 }
 .detail-item span:first-child {
     color: rgba(27, 65, 75, 0.5);
-    /* Назви характеристик */
     text-transform: uppercase;
 }
 .detail-item span:last-child {
     color: #1b414b;
-    /* Значення характеристик */
 }
 .yacht-rental-btn {
     display: block;
     margin: 32px auto 0;
     padding: 12px 28px;
-    border: 1px solid rgba(251, 251, 251, 0.4);
+    border: 1px solid rgba(251, 251, 251, 0.35);
     background: transparent;
     color: #fbfbfb;
     border-radius: 15px;
     font-size: 14px;
     transition: background-color 0.3s;
 }
+/* --ACTIVITIES-- */
+.activities {
+    padding-bottom: 0;
+}
+.activities-wrapper {
+    background-color: #1b414b;
+    border-radius: 24px;
+    padding: 80px 20px;
+}
+.activities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.activities-item {
+    display: flex;
+    flex-direction: column;
+}
+/* Лінія розмежування */
+.activities-num::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 18px;
+    height: 2px;
+    background-color: rgba(251, 251, 251, 0.1);
+    /* Тонка світла лінія */
+}
+.activities-num {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #fbfbfb;
+    /* Додаємо відступ до лінії */
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+        /* Створюємо лінію */
+            position: relative;
+}
+.activities-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    opacity: 0.8;
+}
+/* Прибираємо марджин у останнього тексту, щоб не було зайвого відступу внизу картки */
+.activities-item:last-child .activities-text {
+    margin-bottom: 0;
+}
+.activities-banner {
+    width: 100%;
+    height: 424px;
+    margin: 24px auto 0 auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    /* Якщо фото має бути закругленим, як на макетах */
+
+    /* Стандартне фото для звичайних екранів */
+    background-image: url('../images/mobile/Photo-banner@1x (1).jpg');
+}
+/* --RENT-- */
+.rent {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.rent-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    margin-bottom: 40px;
+}
+.rent-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 335px;
+}
+
+.rent-input,
+.rent-textarea {
+    font-weight: 400;
+    width: 100%;
+    padding: 14px 18px;
+    background-color: transparent;
+    border: 1px solid rgba(251, 251, 251, 0.2);
+    border-radius: 12px;
+    color: #fbfbfb;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.rent-input::placeholder,
+.rent-textarea::placeholder {
+    color: rgba(251, 251, 251, 0.5);
+}
+
+.rent-input:focus,
+.rent-textarea:focus {
+    border-color: #fbfbfb;
+    /* Підсвітка при натисканні */
+}
+
+.rent-textarea {
+    height: 120px;
+    resize: none;
+    /* Забороняємо змінювати розмір вручну */
+}
+
+.rent-submit-btn {
+    display: block;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        padding: 12px 40px;
+        background-color: #1b414b;
+        color: #fbfbfb;
+        border: none;
+        border-radius: 15px;
+        font-weight: 500;
+        cursor: pointer;
+}
+
+.rent-submit-btn:hover {
+    background-color: #2a5a66;
+}
+.rent-photo-banner {
+    width: 335px;
+    height: 412px;
+    border-radius: 24px;
+
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/mobile/photo-rent@1x.jpg');
+}
+
+/* Retina 2x */
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .rent-photo-banner {
+        background-image: url('../images/mobile/photo-rent@2x.jpg');
+    }
+}
+/* --REVIEWS-- */
+.reviews {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #0e1823;
+    /* Темний фон як у всієї сторінки */
+}
+.reviews-title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #fbfbfb;
+        margin-bottom: 25px
+}
+.reviews-description {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #fbfbfb;
+        opacity: 0.4;
+        margin-bottom: 40px;
+}
+.review-card {
+    background-color: #fbfbfb;
+    border-radius: 24px;
+    padding: 32px 8px;
+    text-align: center;
+    max-width: 335px;
+    margin: 0 auto;
+}
+.review-author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.review-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review-author-name {
+    font-weight: 500;
+    padding-top: 24px;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #1b414b;
+}
+
+.review-comment {
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    color: rgba(27, 65, 75, 0.7);
+}
+/* --FOOTER-- */
+.footer {
+    width: 355px;
+    background-color: #1b414b;
+    border-radius: 24px 24px 0 0;
+    padding: 40px 0 20px 0;
+    color: #fbfbfb;
+    text-align: center;
+    margin: 0 auto;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.footer-logo {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    color: #fbfbfb;
+    text-transform: lowercase;
+}
+.footer-nav {
+    display: flex;
+    gap: 4px;
+}
+.footer-link {
+    font-weight: 400;
+    font-size: 9px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    color: #fbfbfb;
+    background-color: #fbfbfb;
+}
+.socials-list {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.footer-tagline {
+    font-size: 14px;
+    line-height: 1.29;
+    max-width: 240px;
+    margin: 0 auto 80px;
+    opacity: 0.8;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid rgba(251, 251, 251, 0.1);
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.privacy-link {
+    text-decoration: underline;
+}
+
+/* Налаштування для Retina екранів */
+@media (min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+.activities-banner {
+        background-image: url('../images/mobile/Photo-banner@2x (1).jpg');
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .page-header {
