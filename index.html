@@ -17,21 +17,91 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
+  <!--MOBILE-MENU-->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="container mobile-menu-container">
+      <div class="mobile-menu-header">
+        <a class="logo" href="./index.html">yachtjet</a>
+        <button class="menu-close-btn" type="button" id="close-menu">
+          <svg width="16" height="16">
+            <use href="./images/icons.svg#icon-Vector-ix"></use>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#yachts" class="mobile-nav-link">Yachts</a></li>
+          <li><a href="#reviews" class="mobile-nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-socials">
+        <li>
+          <a href="" class="social-link">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-istagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="" class="social-link">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="" class="social-link">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-faceboock"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <body>
     <!--HEADER-->
     <header class="page-header">
       <div class="container header">
         <a class="logo" href="./index.html">yachtjet</a>
         <nav class="nav-list">
-          <button type="button">About</button>
-          <button type="button">Yachts</button>
-          <button type="button">Reviews</button>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#yachts" class="nav-link">Yachts</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
         </nav>
         <button class="burger-btn" type="button">
           <svg class="burger-icon" width="28" height="28">
             <use href="./images/icons.svg#icon-icon-menu-equals"></use>
           </svg>
         </button>
+        <ul class="header-socials">
+          <li>
+            <a href="#" class="social-link">
+              <svg class="header-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-istagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <svg class="header-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <svg class="header-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-faceboock"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -73,8 +143,8 @@
             <picture>
               <source
                 srcset="
-                  ./images/tablet/image-tablet@1x.jpg 1x,
-                  ./images/tablet/image-tablet@2x.jpg 2x
+                  ./images/tablet/photo-about-tablet@1x.jpg 1x,
+                  ./images/tablet/photo-about-tablet@2x.jpg 2x
                 "
                 media="(min-width: 768px)"
               />
@@ -97,49 +167,145 @@
         </div>
       </section>
       <!--YACHTS-->
-      <section class="yachts">
+      <section class="yachts" id="yachts">
         <div class="container">
           <h2 class="yachts-title">
             Choose your dream yacht and sail away into the sunset
           </h2>
+
           <ul class="yachts-list">
             <li class="yachts-item">
               <div class="yacht-card">
                 <picture>
                   <source
+                    media="(min-width: 1280px)"
                     srcset="
-                      ./images/mobile/yacht-1@1x.jpg 1x,
-                      ./images/mobile/yacht-1@2x.jpg 2x
+                      ./images/desctop/arrow-desctop@1x.jpg 1x,
+                      ./images/desctop/arrow-desctop@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/arrow-tablet@1x.jpg 1x,
+                      ./images/tablet/arrow-tablet@2x.jpg 2x
                     "
                   />
                   <img
                     src="./images/mobile/yacht-1@1x.jpg"
+                    srcset="./images/mobile/yacht-1@2x.jpg 2x"
                     alt="Yacht Arrow"
                     class="yacht-img"
+                    width="304"
+                    height="268"
                   />
                 </picture>
-
                 <div class="yacht-info">
                   <div class="yacht-header">
                     <h3 class="yacht-name">ARROW</h3>
                     <p class="yacht-category">LUXURY YACHTS</p>
                   </div>
-
                   <ul class="yacht-details">
                     <li class="detail-item">
-                      <span>Length</span> <span>48m(158ft)</span>
+                      <span>Length</span> <span>48m (158ft)</span>
                     </li>
                     <li class="detail-item">
                       <span>Builder</span> <span>Admiral</span>
                     </li>
                     <li class="detail-item">
-                      <span>Built</span> <span>2021</span>
-                    </li>
-                    <li class="detail-item">
-                      <span>Guests</span> <span>11 in 5 cabins</span>
-                    </li>
-                    <li class="detail-item">
                       <span>Price</span> <span>€33,500,000</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="yachts-item">
+              <div class="yacht-card">
+                <picture>
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="
+                      ./images/desctop/benetti-desctop@1x.jpg 1x,
+                      ./images/desctop/benetti-desctop@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/bemetti-tablet@1x.jpg 1x,
+                      ./images/tablet/bemetti-tablet@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/mobile/bemetti-mobile@1x.jpg"
+                    srcset="./images/mobile/bemetti-mobile@2x.jpg 2x"
+                    alt="Yacht Benetti"
+                    class="yacht-img"
+                    width="304"
+                    height="268"
+                  />
+                </picture>
+                <div class="yacht-info">
+                  <div class="yacht-header">
+                    <h3 class="yacht-name">BENETTI OASIS 40M</h3>
+                    <p class="yacht-category">LUXURY YACHTS</p>
+                  </div>
+                  <ul class="yacht-details">
+                    <li class="detail-item">
+                      <span>Length</span> <span>41m (133ft)</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Builder</span> <span>Benetti</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Price</span> <span>€23,210,000</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="yachts-item">
+              <div class="yacht-card">
+                <picture>
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="
+                      ./images/desctop/belle-desctop@1x.jpg 1x,
+                      ./images/desctop/belle-desctop@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/belle-tablet@1x.jpg 1x,
+                      ./images/tablet/belle-tablet@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/mobile/belle-mobile@1x.jpg"
+                    srcset="./images/mobile/belle-mobile@2x.jpg 2x"
+                    alt="Yacht Belle Anna"
+                    class="yacht-img"
+                    width="304"
+                    height="268"
+                  />
+                </picture>
+                <div class="yacht-info">
+                  <div class="yacht-header">
+                    <h3 class="yacht-name">BELLE ANNA</h3>
+                    <p class="yacht-category">LUXURY YACHTS</p>
+                  </div>
+                  <ul class="yacht-details">
+                    <li class="detail-item">
+                      <span>Length</span> <span>50m (164ft)</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Builder</span> <span>ISA</span>
+                    </li>
+                    <li class="detail-item">
+                      <span>Price</span> <span>€21,000,000</span>
                     </li>
                   </ul>
                 </div>
@@ -264,59 +430,57 @@
           </div>
         </div>
       </section>
-      <!--FOOTER-->
-      <footer>
-        <footer class="footer">
-          <div class="container">
-            <div class="footer-top">
-              <a href="./index.html" class="footer-logo">yachtjet</a>
-
-              <ul class="footer-nav">
-                <li><a href="#about" class="footer-link">ABOUT</a></li>
-                <li><a href="#yachts" class="footer-link">YACHTS</a></li>
-                <li><a href="#reviews" class="footer-link">REVIEWS</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-socials">
-              <ul class="socials-list">
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-istagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-youtube"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-faceboock"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <p class="footer-tagline">
-              No matter which yacht you choose, our experienced crew will ensure
-              that your journey is smooth and enjoyable.
-            </p>
-
-            <div class="footer-bottom">
-              <p class="copyright">2023. Yacht Adventures</p>
-              <a href="#" class="privacy-link">Privacy Policy</a>
-            </div>
-          </div>
-        </footer>
-      </footer>
     </main>
-    <footer></footer>
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="./index.html" class="footer-logo">yachtjet</a>
+
+          <ul class="footer-nav">
+            <li><a href="#about" class="footer-link">ABOUT</a></li>
+            <li><a href="#yachts" class="footer-link">YACHTS</a></li>
+            <li><a href="#reviews" class="footer-link">REVIEWS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-socials">
+          <ul class="socials-list">
+            <li>
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-istagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-faceboock"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="footer-tagline">
+          No matter which yacht you choose, our experienced crew will ensure
+          that your journey is smooth and enjoyable.
+        </p>
+
+        <div class="footer-bottom">
+          <p class="copyright">2023. Yacht Adventures</p>
+          <a href="#" class="privacy-link">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>

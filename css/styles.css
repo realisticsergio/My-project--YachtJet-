@@ -71,6 +71,7 @@ button {
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
+        padding: 0 32px;
     }
 }
 
@@ -81,7 +82,7 @@ button {
     }
 
 }
-/* HEADER */
+/* #region HEADER */
 .page-header {
     max-width: 343px;
         margin: 20px auto;
@@ -93,35 +94,42 @@ button {
     height: 42px;
     padding: 0 16px;
     background-color: #ffffff;
-        border-radius: 6px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .logo {
-    padding-left: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    color: #1b414b;
 }
 .nav-list {
     display: none;
 }
 .burger-btn {
-    padding-right: 20px;
         border: none;
         background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0;
+            width: 28px;
+            height: 28px;
 }
 
 .burger-icon {
-    display: block;
-    fill: #372f2f;
+    stroke: #1b414b;
+        fill: none;
 }
-/* HERO */
+.header-socials {
+    display: none;
+}
+/* #endregion */
+
+/* #region HERO */
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
             -webkit-image-set(url('../images/mobile/image-mobile@1x.jpg') 1x,
-                url('../images/mobile/image-mobile@2x.jpg') 2x);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            image-set(url('../images/mobile/image-mobile@1x.jpg') 1x,
                 url('../images/mobile/image-mobile@2x.jpg') 2x);
     
         background-repeat: no-repeat;
@@ -157,14 +165,17 @@ button {
     letter-spacing: -0.02em;
     color: #fbfbfb;
     border-radius: 15px;
+    border: none;
     width: 141px;
     height: 46px;
-    background: #1b414b;
+    background-color: #1b414b;
     display: block;
     margin: 0 auto;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* ABOUT*/
+/* #endregion */
+
+/* #region ABOUT*/
 .about {
     padding-bottom: 60px;
         background-color: #0E1823;
@@ -225,7 +236,9 @@ button {
     object-fit: cover;
 
 }
-/* YACHTS */
+/* #endregion */
+
+/* #region YACHTS */
 .yachts {
     padding: 80px 0;
     background-color: #0e1823;
@@ -264,17 +277,9 @@ button {
 .yacht-name {
     font-size: 14px;
     font-weight: 500;
-    color: #1b414b;
-}
-
-.yacht-category {
-    font-size: 10px;
-    color: rgba(27, 65, 75, 0.5);
+    line-height: 1.18;
+    letter-spacing: -0.04em;
     text-transform: uppercase;
-}
-.yacht-name {
-    font-size: 14px;
-    font-weight: 500;
     color: #1b414b;
 }
 
@@ -300,7 +305,6 @@ button {
     font-size: 14px;
     line-height: 1.18;
     letter-spacing: 0.03em;
-    line-height: 1.18;
 }
 .detail-item span:first-child {
     color: rgba(27, 65, 75, 0.5);
@@ -318,9 +322,24 @@ button {
     color: #fbfbfb;
     border-radius: 15px;
     font-size: 14px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, 
+                    color 0.3s ease, border-color 0.3s ease;
 }
-/* --ACTIVITIES-- */
+.yacht-rental-btn:hover {
+    background-color: #fbfbfb;
+    color: #1b414b;
+    border-color: #fbfbfb;
+    box-shadow: none;
+}
+/* 1. МОБІЛКА (до 767px включно) */
+
+    .yachts-item:nth-child(n+2) {
+        display: none;
+        /* Показуємо тільки ПЕРШУ картку */
+    }
+/* #endregion */
+
+/* #region --ACTIVITIES-- */
 .activities {
     padding-bottom: 0;
 }
@@ -388,8 +407,18 @@ button {
 
     /* Стандартне фото для звичайних екранів */
     background-image: url('../images/mobile/Photo-banner@1x (1).jpg');
+}/* Retina 2x */
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .activities-banner {
+        background-image: url('../images/mobile/Photo-banner@2x (1).jpg');
+    }
 }
-/* --RENT-- */
+
+/* #endregion */
+
+/* #region --RENT-- */
 .rent {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -431,8 +460,11 @@ button {
 
 .rent-input:focus,
 .rent-textarea:focus {
-    border-color: #fbfbfb;
-    /* Підсвітка при натисканні */
+    outline: none;
+        border-color: #fbfbfb;
+        /* Робимо рамку яскраво-білою при натисканні */
+        background-color: rgba(251, 251, 251, 0.05);
+        /* Легка заливка, щоб виділити поле */
 }
 
 .rent-textarea {
@@ -451,11 +483,19 @@ button {
         border: none;
         border-radius: 15px;
         font-weight: 500;
+        transition: background-color 0.3s ease, 
+                    color 0.3s ease, border-color 0.3s ease;
         cursor: pointer;
 }
 
-.rent-submit-btn:hover {
-    background-color: #2a5a66;
+.rent-submit-btn:hover,
+.rent-submit-btn:focus,
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #fbfbfb;
+    color: #1b414b;
+    border-color: #fbfbfb;
+    outline: none;
 }
 .rent-photo-banner {
     width: 335px;
@@ -477,7 +517,9 @@ button {
         background-image: url('../images/mobile/photo-rent@2x.jpg');
     }
 }
-/* --REVIEWS-- */
+/* #endregion */
+
+/* #region --REVIEWS-- */
 .reviews {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -536,9 +578,12 @@ button {
     text-align: center;
     color: rgba(27, 65, 75, 0.7);
 }
-/* --FOOTER-- */
+/* #endregion */
+
+/* #region --FOOTER-- */
 .footer {
-    width: 355px;
+    max-width: 355px;
+        width: 100%;
     background-color: #1b414b;
     border-radius: 24px 24px 0 0;
     padding: 40px 0 20px 0;
@@ -570,33 +615,175 @@ button {
     border: none;
     border-radius: 8px;
     color: #fbfbfb;
-    background-color: #fbfbfb;
+    background-color: rgba(251, 251, 251, 0.3);
+    text-transform: uppercase;
+        transition: all 0.3s ease;
+        /* Плавна зміна всіх властивостей */
+    
 }
+.footer-link:hover,
+.footer-link:focus {
+    background-color: #fbfbfb;
+    color: #1b414b;
+    outline: none;
+    /* Прибираємо стандартний фокус браузера */
+}
+
 .socials-list {
     display: flex;
     justify-content: center;
     gap: 12px;
     margin-bottom: 24px;
 }
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Стан для іконок при ховері та фокусі */
+.social-link:hover,
+.social-link:focus {
+    border-color: #fbfbfb;
+    background-color: rgba(251, 251, 251, 0.1);
+    outline: none;
+    transform: translateY(-3px);
+    /* Легкий підйом вгору */
+}
+
+/* Стиль самої іконки (SVG) */
+.social-icon {
+    fill: #fbfbfb;
+    transition: fill 0.3s ease;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: rgba(251, 251, 251, 0.8);
+    /* Стає чисто білою при наведенні */
+}
 .footer-tagline {
-    font-size: 14px;
-    line-height: 1.29;
-    max-width: 240px;
-    margin: 0 auto 80px;
-    opacity: 0.8;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+        text-align: center;
+        color: #fbfbfb;
+    max-width: 280px;
+    margin: 0 auto 82px;
 }
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(251, 251, 251, 0.1);
     font-size: 10px;
-    opacity: 0.5;
+}
+.copyright {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: rgba(251, 251, 251, 0.4);
+}
+.privacy-link {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 117%;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: rgba(251, 251, 251, 0.4);
+}
+/* #endregion */
+
+  /* #region --MOBILE-MENU-- */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0e1823;
+    /* Темний фон з макета */
+    z-index: 1000;
+    padding: 20px 0;
+
+    /* Анімація відкриття */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
 }
 
-.privacy-link {
-    text-decoration: underline;
+.mobile-menu.is-open {
+    transform: translateX(0);
 }
+.mobile-menu-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 7px 20px;
+    height: 42px;
+}
+.menu-close-btn {
+    display: flex;
+    background: transparent;
+    border: none;
+    fill: #055545;
+}
+.mobile-nav {
+
+}
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 259px;
+    margin-top: 0;
+}
+.mobile-nav-link {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    max-width: 91px;
+    height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(27, 65, 75, 0.5);;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+    background-color: #1b414b;
+    color: #fbfbfb;
+    outline: none;
+}
+
+.mobile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
 
 /* Налаштування для Retina екранів */
 @media (min-device-pixel-ratio: 2),
@@ -606,42 +793,313 @@ button {
         background-image: url('../images/mobile/Photo-banner@2x (1).jpg');
     }
 }
-
+/* #endregion */
 
 @media screen and (min-width: 768px) {
-    .page-header {
-        margin-top: 30px;
-        /* Трохи більше відступу зверху */
-        background-color: transparent;
-        /* Робимо фон прозорим */
-        box-shadow: none;
-        /* Прибираємо тінь мобільної версії */
-    }
-    .header {
-        background-color: transparent;
-        box-shadow: none;
-        height: auto;
-        /* Дозволяємо кнопкам меню задавати висоту */
-    }
+    /* #region HEADER */
+        .page-header {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 768px;
+            padding: 32px 32px;
+            background-color: transparent;
+            z-index: 10;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 48px;
+            padding: 0 16px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Показуємо список навігації, який був прихований */
-    .nav-list {
-        display: flex;
-        gap: 10px;
-        /* Відстань між кнопками/посиланнями */
-    }
+        .nav-list {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 91px;
+            height: 40px;
+            padding: 0 16px;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 9px;
+            text-transform: uppercase;
+            color: #fbfbfb;
+            background-color: rgba(27, 65, 75, 0.5);
+            transition: all 0.3s ease;
+        }
 
-    /* Приховуємо бургер-меню, бо на десктопі є звичайне меню */
-    .burger-btn {
-        display: none;
-    }
+        .nav-link:hover,
+        .nav-link:focus {
+            background-color: #1b414b;
+            color: #fff;
+        }
+       
+        .burger-btn {
+            display: none;
+        }
+/* Соцмережі справа */
+.header-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    list-style: none;
+}
 
-    .logo {
-        padding-left: 0;
-        /* Прибираємо мобільні відступи */
-        color: #fff;
-        /* Робимо лого білим для темного фону */
-        font-weight: 700;
-        font-size: 18px;
+.header-social-icon {
+    fill: #062730;
+    transition: fill 0.3s ease;
+}
+.header-social-icon:hover,
+.header-social-icon:focus {
+    fill: #1b414b;
+
+}
+/* #endregion */
+
+/* #region --HERO-- */
+.hero-section {
+    padding: 280px 0 282px;
+    background-size: cover;
+    background-position: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('../images/tablet/image-tablet@1x.jpg');
+    
+}
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('../images/tablet/image-tablet@2x.jpg');
     }
 }
+
+.hero-title {
+    /* Заголовок стає значно більшим */
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1.0;
+    max-width: 704px;
+    /* Обмежуємо ширину, щоб текст гарно розбився на рядки */
+    margin: 0 auto 24px;
+}
+
+.hero-text {
+    /* Текст під заголовком */
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 597px;
+    margin: 0 auto 40px;
+    color: rgba(251, 251, 251, 0.7);
+}
+
+.hero-btn {
+    /* Кнопка на планшеті */
+    width: 179px;
+    height: 52px;
+    font-size: 18px;
+}
+/* #endregion */
+
+/* #region --ABOUT-- */
+
+.about {
+    padding-bottom: 80px;
+    /* Збільшуємо відступ знизу */
+}
+
+/* Контейнер для білої плашки */
+.about-content {
+    min-height: 675px;
+    padding: 50px 32px;
+    margin-top: -80px;
+    /* Сильніше накладання на Hero, якщо потрібно за макетом */
+    border-radius: 24px;
+}
+.about-title {
+    font-size: 48px;
+    /* Заголовок стає значно більшим */
+    line-height: 1.1;
+    margin-bottom: 50px;
+    max-width: 536px;
+}
+.about-subtitle {
+    font-size: 23px;
+    margin-bottom: 20px;
+    max-width: 390px;
+}
+
+.about-text {
+    font-size: 13px;
+    line-height: 1.15;
+    max-width: 390px;
+}
+/* Блок із фотографією */
+.about-photo {
+    margin-top: -154px;
+    /* Відступ від тексту до фото */
+    border-radius: 26px;
+    height: 470px;
+}
+
+.about-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* #endregion */
+
+/* #region --YACHTS--*/
+.yachts-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.yachts-title {
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    max-width: 665px;
+}
+.yachts-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Відступи між картками: 32px по вертикалі, 24px по горизонталі */
+    gap: 32px 24px;
+    justify-content: center;
+}
+
+.yachts-item {
+    width: calc((100% - 24px) / 2);
+}
+
+/* Стилізація карток */
+.yacht-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.yacht-card-img {
+    width: 100%;
+    /* Використовуємо пропорції з макета для фото в картці */
+    height: 280px;
+    object-fit: cover;
+}
+
+.yacht-card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.yachts-item:nth-child(2) {
+    display: block;
+}
+
+/* #endregion */
+
+/* #region --ACTIVITIES-- */
+.activities-wrapper {
+    padding: 80px 32px;
+}
+.activities-list {
+    flex-direction: row;
+    /* Текст стає в ряд */
+    flex-wrap: wrap;
+    /* Дозволяємо перенос на 2 рядки */
+    gap: 32px 24px;
+    /* Відступи між картками */
+}
+.activities-item {
+/* Розрахунок 2х2: (100% - відступ 24px) / 2 */
+    width: calc((100% - 24px) / 2);
+}
+.activities-banner {
+    height: 410px;
+    margin-top: 40px;
+    /* Підключаємо фото для планшета */
+    background-image: url('../images/tablet/banner-tablet@1x.jpg');
+}
+
+/* Retina для планшета */
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .activities-banner {
+        background-image: url('../images/tablet/banner-tablet@2x.jpg');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1216px;
+    }
+
+    .yachts-item:nth-child(3) {
+        display: block;
+        /* Показуємо ТРЕТЮ картку */
+    }
+
+    .yachts-item {
+        width: calc((100% - 48px) / 3);
+        /* Три картки в ряд */
+    }
+
+    .yacht-img {
+        height: 268px;
+        /* Висота фото для десктопа */
+    }
+        .activities-banner {
+            height: 440px;
+            background-image: url('../images/desktop/Photo-banner@1x.jpg');
+        }
+        }
+
+
+/* 4. ВЕЛИКИЙ ДЕСКТОП (від 1440px) */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+        /* Розширюємо для 1440px */
+    }
+}
+
+
+
+
+
+
+
+
+
